@@ -2,6 +2,7 @@ from googleapiclient.discovery import build
 import matplotlib.pyplot as plt
 import pandas as pd
 from operator import itemgetter
+import json
 import matplotlib.font_manager
 
 api_key = 'AIzaSyCZTpGs9kxHFjzrjZnrnafbn5Yww91A5s4'  # our token
@@ -47,3 +48,8 @@ for i in full_video_response:
 view_sr = pd.Series(views, dates)
 view_sr.plot()
 plt.show()
+dat_vie_dict = dict(zip(dates, views))  # suppose to be responde
+with open("results.json", "w") as f:
+    f.seek(0)
+    json.dump(dat_vie_dict, f, indent=4,)
+print(dat_vie_dict)
