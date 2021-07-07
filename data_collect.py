@@ -11,9 +11,9 @@ youtube = build('youtube', 'v3', developerKey=api_key)
 
 request = youtube.search().list(  # request method that collect data
     part='snippet',  # part of returned dict
-    q='Planets',  # search parameter
+    q='resident evil village',  # search parameter
     maxResults='50',
-    order='relevance'
+    order='viewCount'
 )
 
 response = request.execute()  # making from request response dict
@@ -48,8 +48,7 @@ for i in full_video_response:  # appending x and y coordinates
 view_sr = pd.Series(views, dates)
 view_sr.plot()
 plt.show()
-dat_vie_dict = dict(zip(dates, views))  # suppose to be respond
-with open("results.json", "w") as f:
-    f.seek(0)
-    json.dump(dat_vie_dict, f, indent=4,)
-print(dat_vie_dict)
+# dat_vie_dict =   # suppose to be respond
+
+print(list(zip(dates, views)))
+
