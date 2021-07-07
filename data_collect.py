@@ -9,9 +9,10 @@ api_key = 'AIzaSyCZTpGs9kxHFjzrjZnrnafbn5Yww91A5s4'  # our token
 
 youtube = build('youtube', 'v3', developerKey=api_key)
 
+srh_request = ''
 request = youtube.search().list(  # request method that collect data
     part='snippet',  # part of returned dict
-    q='resident evil village',  # search parameter
+    q=srh_request,  # search request field
     maxResults='50',
     order='viewCount'
 )
