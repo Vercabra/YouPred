@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from operator import itemgetter
 import json
-import matplotlib.font_manager
+
 
 api_key = 'AIzaSyCZTpGs9kxHFjzrjZnrnafbn5Yww91A5s4'  # our token
 
@@ -38,17 +38,17 @@ for i in search_id:
                                     i_response['items'][0]['snippet']['publishedAt'],
                                     int((i_response['items'][0]['statistics']['viewCount']))))  # collecting only needed
 
-full_video_response.sort(key=itemgetter(0))
-dates = []
-views = []
-for i in full_video_response:
+full_video_response.sort(key=itemgetter(0))  # sorting by date
+dates = []  # x
+views = []  # y
+for i in full_video_response:  # appending x and y coordinates
     dates.append(i[2][:10])
     views.append(i[3])
 
 view_sr = pd.Series(views, dates)
 view_sr.plot()
 plt.show()
-dat_vie_dict = dict(zip(dates, views))  # suppose to be responde
+dat_vie_dict = dict(zip(dates, views))  # suppose to be respond
 with open("results.json", "w") as f:
     f.seek(0)
     json.dump(dat_vie_dict, f, indent=4,)
