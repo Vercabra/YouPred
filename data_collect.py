@@ -76,6 +76,6 @@ fig.update_layout(width=980,
                   ))
 
 
-print(fig.to_html())
+print(fig.to_html(include_plotlyjs='cdn'))
 
 
