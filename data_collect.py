@@ -1,8 +1,8 @@
 from googleapiclient.discovery import build
-import matplotlib.pyplot as plt
 import pandas as pd
 from operator import itemgetter
-import json
+import plotly.express as px
+import plotly.graph_objects as go
 
 
 api_key = 'AIzaSyCZTpGs9kxHFjzrjZnrnafbn5Yww91A5s4'  # our token
@@ -46,10 +46,36 @@ for i in full_video_response:  # appending x and y coordinates
     dates.append(i[2][:10])
     views.append(i[3])
 
-view_sr = pd.Series(views, dates)
-view_sr.plot()
-plt.show()
-# dat_vie_dict =   # suppose to be respond
+fig = go.Figure()
 
-print(list(zip(dates, views)))
+
+fig.add_trace(go.Scatter(x=dates,
+                         y=views,
+                         line=dict(color='rgb(94, 114, 228)',
+                                   width=3))),
+
+fig.update_layout(width=980,
+                  height=483,
+                  plot_bgcolor='#172b4d',
+                  paper_bgcolor="#172b4d",
+                  xaxis_showgrid=False,
+                  yaxis_showgrid=False,
+                  xaxis_zeroline=False,
+                  yaxis_zeroline=False,
+                  xaxis_anchor='free',
+                  yaxis_anchor='free',
+                  xaxis_position=0,
+                  yaxis_position=0,
+                  title="Total views stats",
+                  title_font_color='#ffffff',
+                  title_font_family='Rubik',
+                  font=dict(
+                      family="Rubik Light",
+                      size=18,
+                      color="#adb5bd"
+                  ))
+
+
+print(fig.to_html())
+
 
