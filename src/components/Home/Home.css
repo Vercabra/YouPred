@@ -1,0 +1,99 @@
+.homeComponent{
+	width: 87%;
+}
+
+.homeHeader{
+	background-color: #5e72e4;
+	height: 42vh;
+
+}
+
+.homeHeaderInfo{
+	height: 80px;
+	display: flex;
+	justify-content:space-between;
+	align-items: center; 
+
+	border-bottom: 1px solid #687be6;
+}
+
+.bell{
+	height:10px;
+	width:40px;
+}
+
+.searchBar{
+	margin-left: 30px;
+}
+
+.userInfo{
+	display: flex;
+	width: 300px;
+	justify-content: space-around;
+	align-items: center;
+	margin-right: 30px;
+
+}
+
+.userName{
+	font-weight: 600;
+	color: white;
+	font-size: 18px;
+}
+
+.pathInfo{
+	margin-top: 20px;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.pathBox{
+	background-color: white;
+	padding: 10px;
+	border-radius: 10px;
+
+	margin-left: 10px;
+
+	display:flex;
+	align-items: center;
+	justify-content: space-between;
+
+}
+
+.pathWrapper{
+	display: flex;
+	align-items: center;
+	margin-left: 30px;
+	justify-content: space-between;
+	width: 280px;
+}
+
+.pathWrapper:nth-child(2){
+	width: 150px;
+	margin-right: 30px;
+}
+
+.pathName{
+	font-weight: 600;
+	color: white;
+	font-size: 18px;
+}
+
+.pathBoxInfo{
+	margin-left: 5px;
+	font-size: 16px;
+	color: grey;
+}
+
+.cards{
+	margin-top: 30px;
+	display: flex;
+	justify-content: space-around; 
+}
+
+.infoWrapper{
+	display: flex;
+	justify-content: space-between;
+}

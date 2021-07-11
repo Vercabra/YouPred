@@ -1,0 +1,52 @@
+.cardComponent{
+	background: white;
+	border-radius: 10px;
+	width: 23%;
+	height: 120px;
+	padding: 15px 25px;
+}
+
+.cardWrapper{
+	margin-top: 15px;
+	display: flex;
+	justify-content: space-between;
+	width: 150px;
+}
+
+.cardName{
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 12px;
+	color: gray;
+}
+
+.cardNumber{
+	font-weight: 600;
+	font-size: 20px;
+}
+
+.cardPercent{
+	color: #2dce89
+}
+
+.circle{
+	height: 55px;
+  	width: 55px;
+  	/*background: linear-gradient(to right, #e44d26, #f16529);  W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  	border-radius: 50%;
+  	display: flex;
+  	justify-content: space-around;
+  	align-items: center;
+
+}
+
+.circle:nth-child(2){
+	background: -webkit-linear-gradient(to right, #4ac29a, #bdfff3);
+
+}
+
+.circleItem{
+	height: 30px;
+	width: 30px;
+
+}
