@@ -310,8 +310,7 @@
 				6A94D538270C6F84004FA2E9 /* RoutingProvider */,
 				6A94D532270C6EDF004FA2E9 /* Session */,
 			);
-			name = Services;
-			path = Shared/Services;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		6A94D532270C6EDF004FA2E9 /* Session */ = {
@@ -369,8 +368,7 @@
 			children = (
 				6A94D53F270C7111004FA2E9 /* Authorization */,
 			);
-			name = Scenes;
-			path = Shared/Scenes;
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		6A94D53F270C7111004FA2E9 /* Authorization */ = {
