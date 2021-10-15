@@ -17,6 +17,7 @@ enum ContainerConfigurator {
         registerRouters(inContainer: c)
         registerViewModels(inContainer: c)
         registerViews(inContainer: c)
+        registerMappers(inContainer: c)
         return c
     }
     
@@ -38,7 +39,8 @@ enum ContainerConfigurator {
     
     static func registerViewModels(inContainer c: DependencyContainer) {
         c.register(.unique) { StartUpViewModel(sessionService: try c.resolve()) as StartUpViewModelProtocol }
-        c.register(.unique) { AuthViewModel() as AuthViewModelProtocol }
+        c.register(.unique) { AuthViewModel(mapper: try c.resolve()) as AuthViewModelProtocol }
+        c.register(.unique) { PlotViewModel() as PlotViewModelProtocol }
     }
     
     static func registerViews(inContainer c: DependencyContainer) {
@@ -60,6 +62,11 @@ enum ContainerConfigurator {
             }
         }
         
-        c.register {(viewModel: AuthViewModelProtocol ) ->  AuthViewController in try resolve(viewModel) }
+        c.register { (viewModel: AuthViewModelProtocol) ->  AuthViewController in try resolve(viewModel) }
+        c.register { (viewModel: PlotViewModelProtocol) ->  PlotViewController in try resolve(viewModel) }
+    }
+    
+    static func registerMappers(inContainer c: DependencyContainer) {
+        c.register { AuthViewModelMapper() as AuthViewModelMapperProtocol }
     }
 }

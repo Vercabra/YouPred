@@ -2,6 +2,7 @@ ${PODS_ROOT}/Target Support Files/Pods-YouPred/Pods-YouPred-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
 ${BUILT_PRODUCTS_DIR}/AppRouter/AppRouter.framework
 ${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework
+${BUILT_PRODUCTS_DIR}/Charts/Charts.framework
 ${BUILT_PRODUCTS_DIR}/DTCollectionViewManager/DTCollectionViewManager.framework
 ${BUILT_PRODUCTS_DIR}/DTModelStorage/DTModelStorage.framework
 ${BUILT_PRODUCTS_DIR}/DTTableViewManager/DTTableViewManager.framework

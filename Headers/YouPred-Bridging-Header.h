@@ -18,3 +18,4 @@
 @import IQKeyboardManagerSwift;
 @import DTCollectionViewManager;
 @import Firebase;
+@import Charts;

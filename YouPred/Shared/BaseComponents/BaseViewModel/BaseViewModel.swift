@@ -12,7 +12,6 @@ class BaseViewModel {
     var baseRouter: RoutingProtocol? {
         return routing.wrappedValue
     }
-    
     var disposeBag = DisposeBag()
     
     init() {}

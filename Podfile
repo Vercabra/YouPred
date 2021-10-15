@@ -18,6 +18,7 @@ target 'YouPred' do
   pod 'LoadableViews'
   pod 'DTCollectionViewManager'
   pod 'DTTableViewManager'
+  pod 'Charts'
 
   pod 'Dip'
 
