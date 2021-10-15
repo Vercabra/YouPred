@@ -350,6 +350,9 @@ PODS:
   - BoringSSL-GRPC/Implementation (0.0.7):
     - BoringSSL-GRPC/Interface (= 0.0.7)
   - BoringSSL-GRPC/Interface (0.0.7)
+  - Charts (3.6.0):
+    - Charts/Core (= 3.6.0)
+  - Charts/Core (3.6.0)
   - Dip (7.1.1)
   - DTCollectionViewManager (8.2.0):
     - DTModelStorage (~> 9.1.0)
@@ -469,6 +472,7 @@ DEPENDENCIES:
   - Alamofire
   - AppRouter (from `https://github.com/hellbit/AppRouter.git`)
   - AppRouter/RxSwift (from `https://github.com/hellbit/AppRouter.git`)
+  - Charts
   - Dip
   - DTCollectionViewManager
   - DTTableViewManager
@@ -488,6 +492,7 @@ SPEC REPOS:
     - abseil
     - Alamofire
     - BoringSSL-GRPC
+    - Charts
     - Dip
     - DTCollectionViewManager
     - DTModelStorage
@@ -528,6 +533,7 @@ SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
   AppRouter: 1fa84d1d770b5bca4aedc19d9852d6599b64f86a
   BoringSSL-GRPC: 8edf627ee524575e2f8d19d56f068b448eea3879
+  Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
   Dip: 6bebb09d50f88633039ce2c9fe5bc56d387b492f
   DTCollectionViewManager: ebd58b6f77bd6aba86faeb278176bf98c4ae34f8
   DTModelStorage: 63aee1d446c80a23b4332cabe2dbfa57fddeb5af
@@ -554,6 +560,6 @@ SPEC CHECKSUMS:
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 1e2e1f9570186967f617e49128ed26ccf1bafc8e
 
-PODFILE CHECKSUM: 7eae7808c3acecb5418ff3c198412c83bd15997d
+PODFILE CHECKSUM: 0331b4a0b328c13517c8ddfa8d763ea8ffe69c8a
 
 COCOAPODS: 1.10.1

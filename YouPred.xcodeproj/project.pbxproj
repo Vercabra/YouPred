@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1F0B0F21CA0217CD15FE4985 /* Pods_YouPredTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54D6C9E71B1A33E8866EE260 /* Pods_YouPredTests.framework */; };
 		6A94D4E1270C64E5004FA2E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A94D4E0270C64E5004FA2E9 /* AppDelegate.swift */; };
-		6A94D4EA270C64EB004FA2E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A94D4E9270C64EB004FA2E9 /* Assets.xcassets */; };
+		6A94D4EA270C64EB004FA2E9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A94D4E9270C64EB004FA2E9 /* Images.xcassets */; };
 		6A94D4ED270C64EB004FA2E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A94D4EB270C64EB004FA2E9 /* LaunchScreen.storyboard */; };
 		6A94D4F8270C64EC004FA2E9 /* YouPredTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A94D4F7270C64EC004FA2E9 /* YouPredTests.swift */; };
 		6A94D503270C64EC004FA2E9 /* YouPredUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A94D502270C64EC004FA2E9 /* YouPredUITests.swift */; };
@@ -35,6 +35,13 @@
 		6A94D54F270C759B004FA2E9 /* ViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A94D54E270C759B004FA2E9 /* ViewModelFactory.swift */; };
 		6A94D552270C78FD004FA2E9 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A94D551270C78FD004FA2E9 /* Injection.swift */; };
 		6A94D554270C7A0F004FA2E9 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A94D553270C7A0F004FA2E9 /* BaseService.swift */; };
+		6AC62BD82719A4DA0040087E /* PlotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC62BD72719A4DA0040087E /* PlotViewController.swift */; };
+		6AC62BDA2719A4E60040087E /* PlotViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC62BD92719A4E60040087E /* PlotViewModelProtocol.swift */; };
+		6AC62BDC2719A4F30040087E /* PlotViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AC62BDB2719A4F30040087E /* PlotViewController.storyboard */; };
+		6AC62BE02719A5DD0040087E /* PlotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC62BDF2719A5DD0040087E /* PlotView.swift */; };
+		6AC62BE22719A5EA0040087E /* PlotView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AC62BE12719A5EA0040087E /* PlotView.xib */; };
+		6AC62BE42719B3580040087E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AC62BE32719B3580040087E /* Colors.xcassets */; };
+		6AC62BE72719B61D0040087E /* AuthViewModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC62BE62719B61D0040087E /* AuthViewModelMapper.swift */; };
 		EA442FEDA14D6E25514918C5 /* Pods_YouPred.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C19ED34B0DD29D1530343A8 /* Pods_YouPred.framework */; };
 		FFB8E0C3CC4FFF992ED8A27B /* Pods_YouPred_YouPredUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D158303BA1FE937A021B27D /* Pods_YouPred_YouPredUITests.framework */; };
 /* End PBXBuildFile section */
@@ -63,7 +70,7 @@
 		625F5DB37134D7C676C070DF /* Pods-YouPred.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouPred.release.xcconfig"; path = "Target Support Files/Pods-YouPred/Pods-YouPred.release.xcconfig"; sourceTree = "<group>"; };
 		6A94D4DD270C64E5004FA2E9 /* YouPred.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouPred.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A94D4E0270C64E5004FA2E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6A94D4E9270C64EB004FA2E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6A94D4E9270C64EB004FA2E9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6A94D4EC270C64EB004FA2E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6A94D4EE270C64EB004FA2E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A94D4F3270C64EC004FA2E9 /* YouPredTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YouPredTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +102,13 @@
 		6A94D54E270C759B004FA2E9 /* ViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelFactory.swift; sourceTree = "<group>"; };
 		6A94D551270C78FD004FA2E9 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
 		6A94D553270C7A0F004FA2E9 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		6AC62BD72719A4DA0040087E /* PlotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlotViewController.swift; sourceTree = "<group>"; };
+		6AC62BD92719A4E60040087E /* PlotViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlotViewModelProtocol.swift; sourceTree = "<group>"; };
+		6AC62BDB2719A4F30040087E /* PlotViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PlotViewController.storyboard; sourceTree = "<group>"; };
+		6AC62BDF2719A5DD0040087E /* PlotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlotView.swift; sourceTree = "<group>"; };
+		6AC62BE12719A5EA0040087E /* PlotView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlotView.xib; sourceTree = "<group>"; };
+		6AC62BE32719B3580040087E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		6AC62BE62719B61D0040087E /* AuthViewModelMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModelMapper.swift; sourceTree = "<group>"; };
 		AFBEE2B7050D268C54946329 /* Pods-YouPred.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouPred.debug.xcconfig"; path = "Target Support Files/Pods-YouPred/Pods-YouPred.debug.xcconfig"; sourceTree = "<group>"; };
 		BECBFBFBBA4B12AD5ABD120B /* Pods-YouPredTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouPredTests.release.xcconfig"; path = "Target Support Files/Pods-YouPredTests/Pods-YouPredTests.release.xcconfig"; sourceTree = "<group>"; };
 		C6E227BAEE5F4FE1A9DBEE55 /* Pods-YouPred-YouPredUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouPred-YouPredUITests.release.xcconfig"; path = "Target Support Files/Pods-YouPred-YouPredUITests/Pods-YouPred-YouPredUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -213,6 +227,7 @@
 		6A94D515270C6AE1004FA2E9 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				6AC62BDD2719A5C90040087E /* Views */,
 				6A94D521270C6C55004FA2E9 /* Extensions */,
 				6A94D51A270C6B50004FA2E9 /* BaseComponents */,
 				6A94D524270C6D0A004FA2E9 /* StartupWindow */,
@@ -358,7 +373,8 @@
 		6A94D53D270C70E9004FA2E9 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				6A94D4E9270C64EB004FA2E9 /* Assets.xcassets */,
+				6A94D4E9270C64EB004FA2E9 /* Images.xcassets */,
+				6AC62BE32719B3580040087E /* Colors.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -366,6 +382,7 @@
 		6A94D53E270C7104004FA2E9 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				6AC62BD62719A4BC0040087E /* Plot */,
 				6A94D53F270C7111004FA2E9 /* Authorization */,
 			);
 			path = Scenes;
@@ -374,6 +391,7 @@
 		6A94D53F270C7111004FA2E9 /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
+				6AC62BE52719B6070040087E /* Services */,
 				6A94D540270C7120004FA2E9 /* AuthViewController.swift */,
 				6A94D542270C712B004FA2E9 /* AuthViewModelProtocol.swift */,
 				6A94D549270C74F5004FA2E9 /* AuthViewController.storyboard */,
@@ -404,6 +422,41 @@
 				6A94D551270C78FD004FA2E9 /* Injection.swift */,
 			);
 			path = DIP;
+			sourceTree = "<group>";
+		};
+		6AC62BD62719A4BC0040087E /* Plot */ = {
+			isa = PBXGroup;
+			children = (
+				6AC62BD72719A4DA0040087E /* PlotViewController.swift */,
+				6AC62BD92719A4E60040087E /* PlotViewModelProtocol.swift */,
+				6AC62BDB2719A4F30040087E /* PlotViewController.storyboard */,
+			);
+			path = Plot;
+			sourceTree = "<group>";
+		};
+		6AC62BDD2719A5C90040087E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6AC62BDE2719A5CE0040087E /* Plot */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6AC62BDE2719A5CE0040087E /* Plot */ = {
+			isa = PBXGroup;
+			children = (
+				6AC62BDF2719A5DD0040087E /* PlotView.swift */,
+				6AC62BE12719A5EA0040087E /* PlotView.xib */,
+			);
+			path = Plot;
+			sourceTree = "<group>";
+		};
+		6AC62BE52719B6070040087E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				6AC62BE62719B61D0040087E /* AuthViewModelMapper.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		7BAF34ADEF4DBDE645704C4B /* Pods */ = {
@@ -529,7 +582,10 @@
 			files = (
 				6A94D4ED270C64EB004FA2E9 /* LaunchScreen.storyboard in Resources */,
 				6A94D54A270C74F5004FA2E9 /* AuthViewController.storyboard in Resources */,
-				6A94D4EA270C64EB004FA2E9 /* Assets.xcassets in Resources */,
+				6AC62BDC2719A4F30040087E /* PlotViewController.storyboard in Resources */,
+				6AC62BE42719B3580040087E /* Colors.xcassets in Resources */,
+				6AC62BE22719A5EA0040087E /* PlotView.xib in Resources */,
+				6A94D4EA270C64EB004FA2E9 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -658,15 +714,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A94D53A270C6F96004FA2E9 /* RoutingTargetProvider.swift in Sources */,
+				6AC62BD82719A4DA0040087E /* PlotViewController.swift in Sources */,
 				6A94D545270C71D4004FA2E9 /* NonReusableViewProtocol.swift in Sources */,
 				6A94D51C270C6B6F004FA2E9 /* BaseViewController.swift in Sources */,
 				6A94D52B270C6D8C004FA2E9 /* Localization.swift in Sources */,
 				6A94D554270C7A0F004FA2E9 /* BaseService.swift in Sources */,
 				6A94D520270C6BEC004FA2E9 /* BaseLoadableView.swift in Sources */,
+				6AC62BE72719B61D0040087E /* AuthViewModelMapper.swift in Sources */,
 				6A94D528270C6D34004FA2E9 /* StartupViewModelProtocol.swift in Sources */,
 				6A94D54F270C759B004FA2E9 /* ViewModelFactory.swift in Sources */,
 				6A94D534270C6EEF004FA2E9 /* SessionServiceProtocol.swift in Sources */,
 				6A94D54D270C7589004FA2E9 /* ViewFactory.swift in Sources */,
+				6AC62BE02719A5DD0040087E /* PlotView.swift in Sources */,
 				6A94D514270C6A45004FA2E9 /* ContainerConfigurator.swift in Sources */,
 				6A94D526270C6D29004FA2E9 /* StartupWindow.swift in Sources */,
 				6A94D543270C712B004FA2E9 /* AuthViewModelProtocol.swift in Sources */,
@@ -675,6 +734,7 @@
 				6A94D537270C6F19004FA2E9 /* User.swift in Sources */,
 				6A94D52E270C6DEB004FA2E9 /* BaseRouting.swift in Sources */,
 				6A94D548270C7417004FA2E9 /* AuthRoutingProtocol.swift in Sources */,
+				6AC62BDA2719A4E60040087E /* PlotViewModelProtocol.swift in Sources */,
 				6A94D4E1270C64E5004FA2E9 /* AppDelegate.swift in Sources */,
 				6A94D523270C6C62004FA2E9 /* UIView+extensions.swift in Sources */,
 				6A94D51E270C6BAB004FA2E9 /* BaseViewModel.swift in Sources */,

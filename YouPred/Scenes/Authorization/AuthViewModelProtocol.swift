@@ -6,8 +6,22 @@
 //
 
 protocol AuthViewModelProtocol {
+    var mapper: AuthViewModelMapperProtocol { get }
 }
 
 class AuthViewModel: BaseViewModel, AuthViewModelProtocol, Routable {
-    var router:  SessionRoutingProtocol? { return baseRouter }
+    var router:  AuthRoutingProtocol? { return baseRouter }
+    let mapper: AuthViewModelMapperProtocol
+    
+    init(mapper: AuthViewModelMapperProtocol) {
+        self.mapper = mapper
+        super.init()
+        self.observeActions()
+    }
+    
+    private func observeActions() {
+        mapper.goNextButtonDidPress.asObservable().subscribe(onNext: { [weak self] in
+            self?.router?.routeToPlot()
+        }).disposed(by: disposeBag)
+    }
 }

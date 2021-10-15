@@ -34,4 +34,16 @@ extension UIView {
             layer.borderColor = newValue.cgColor
         }
     }
+    
+    func dropShadow(color: UIColor,
+                    opacity: Float,
+                    offset: CGSize,
+                    radius: CGFloat) {
+        
+        layer.shadowColor = color.cgColor
+        layer.shadowOpacity = opacity
+        layer.shadowOffset = offset
+        layer.shadowRadius = radius
+        layer.masksToBounds = false
+    }
 }

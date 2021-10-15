@@ -7,6 +7,7 @@
 
 protocol AuthRoutingProtocol {
     func routeToAuthorization()
+    func routeToPlot()
 }
 
 extension BaseRouting: AuthRoutingProtocol {
@@ -18,6 +19,16 @@ extension BaseRouting: AuthRoutingProtocol {
             let navigation = UINavigationController(rootViewController: vc)
             navigation.isNavigationBarHidden = true
             targetProvider.rootViewController = navigation
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+    func routeToPlot() {
+        do {
+            let viewModel: PlotViewModelProtocol = try viewModelsFactory.buildViewModel()
+            let vc = try viewsFactory.buildView(viewModel) as PlotViewController
+            try vc.presenter().push()
         } catch {
             print(error.localizedDescription)
         }
