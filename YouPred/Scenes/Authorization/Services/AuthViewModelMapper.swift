@@ -6,9 +6,7 @@
 //
 
 protocol AuthViewModelMapperProtocol {
-    var goNextButtonDidPress: PublishSubject<Void> { get }
 }
 
 class AuthViewModelMapper: AuthViewModelMapperProtocol {
-    let goNextButtonDidPress: PublishSubject<Void> = .init()
 }

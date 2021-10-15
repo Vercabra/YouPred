@@ -7,7 +7,7 @@
 
 protocol SessionRoutingProtocol {
     func routeToAuth()
-    func routeToMain(animated: Bool)
+    func routeToMain()
     
     func present(vc: UIViewController)
     func presentActivity(_ vc: UIActivityViewController)
@@ -18,6 +18,7 @@ extension BaseRouting: SessionRoutingProtocol {
         routeToAuthorization()
     }
     
-    func routeToMain(animated: Bool) {
+    func routeToMain() {
+        routeToPlot(animated: false)
     }
 }

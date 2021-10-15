@@ -19,3 +19,4 @@
 @import DTCollectionViewManager;
 @import Firebase;
 @import Charts;
+@import GoogleSignIn;

@@ -8,6 +8,7 @@ target 'YouPred' do
   pod 'Firebase/Storage'
   pod 'FirebaseStorage'
   pod 'FirebaseDatabase'
+  pod 'GoogleSignIn', '5.0.2'
 
   pod 'Alamofire'
   

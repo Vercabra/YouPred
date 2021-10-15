@@ -19,6 +19,11 @@ class StartUpViewModel: BaseViewModel, StartUpViewModelProtocol, Routable {
     }
     
     func goToNext() {
-        router?.routeToAuth()
+        if let user = Auth.auth().currentUser {
+            sessionService.setup(user: user)
+            router?.routeToMain()
+        } else {
+            router?.routeToAuth()
+        }
     }
 }
