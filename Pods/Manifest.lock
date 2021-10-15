@@ -339,6 +339,11 @@ PODS:
     - abseil/base/config
     - abseil/meta/type_traits
   - Alamofire (5.4.3)
+  - AppAuth (1.4.0):
+    - AppAuth/Core (= 1.4.0)
+    - AppAuth/ExternalUserAgent (= 1.4.0)
+  - AppAuth/Core (1.4.0)
+  - AppAuth/ExternalUserAgent (1.4.0)
   - AppRouter (5.1.0):
     - AppRouter/Core (= 5.1.0)
   - AppRouter/Core (5.1.0)
@@ -409,6 +414,10 @@ PODS:
     - GoogleUtilities/Environment (~> 7.2)
     - nanopb (~> 2.30908.0)
     - PromisesObjC (< 3.0, >= 1.2)
+  - GoogleSignIn (5.0.2):
+    - AppAuth (~> 1.2)
+    - GTMAppAuth (~> 1.0)
+    - GTMSessionFetcher/Core (~> 1.1)
   - GoogleUtilities/AppDelegateSwizzler (7.5.0):
     - GoogleUtilities/Environment
     - GoogleUtilities/Logger
@@ -448,6 +457,9 @@ PODS:
     - BoringSSL-GRPC (= 0.0.7)
     - gRPC-Core/Interface (= 1.28.2)
   - gRPC-Core/Interface (1.28.2)
+  - GTMAppAuth (1.2.2):
+    - AppAuth/Core (~> 1.4)
+    - GTMSessionFetcher/Core (~> 1.5)
   - GTMSessionFetcher/Core (1.7.0)
   - IQKeyboardManagerSwift (6.5.6)
   - leveldb-library (1.22.1)
@@ -481,6 +493,7 @@ DEPENDENCIES:
   - Firebase/Storage
   - FirebaseDatabase
   - FirebaseStorage
+  - GoogleSignIn (= 5.0.2)
   - IQKeyboardManagerSwift
   - LoadableViews
   - RxCocoa
@@ -491,6 +504,7 @@ SPEC REPOS:
   trunk:
     - abseil
     - Alamofire
+    - AppAuth
     - BoringSSL-GRPC
     - Charts
     - Dip
@@ -505,9 +519,11 @@ SPEC REPOS:
     - FirebaseFirestore
     - FirebaseStorage
     - GoogleDataTransport
+    - GoogleSignIn
     - GoogleUtilities
     - "gRPC-C++"
     - gRPC-Core
+    - GTMAppAuth
     - GTMSessionFetcher
     - IQKeyboardManagerSwift
     - leveldb-library
@@ -531,6 +547,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
   AppRouter: 1fa84d1d770b5bca4aedc19d9852d6599b64f86a
   BoringSSL-GRPC: 8edf627ee524575e2f8d19d56f068b448eea3879
   Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
@@ -546,9 +563,11 @@ SPEC CHECKSUMS:
   FirebaseFirestore: 9aa10de35bb76a5fe40fdf5c858669f0eac88a99
   FirebaseStorage: 2c176ca64a68b45bddc3c7d4d2c0c839927ad92c
   GoogleDataTransport: 85fd18ff3019bb85d3f2c551d04c481dedf71fc9
+  GoogleSignIn: 7137d297ddc022a7e0aa4619c86d72c909fa7213
   GoogleUtilities: eea970f4a389963963bffe8d8fabe43540678b9c
   "gRPC-C++": 13d8ccef97d5c3c441b7e3c529ef28ebee86fad2
   gRPC-Core: 4afa11bfbedf7cdecd04de535a9e046893404ed5
+  GTMAppAuth: ad5c2b70b9a8689e1a04033c9369c4915bfcbe89
   GTMSessionFetcher: 43748f93435c2aa068b1cbe39655aaf600652e91
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
@@ -560,6 +579,6 @@ SPEC CHECKSUMS:
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 1e2e1f9570186967f617e49128ed26ccf1bafc8e
 
-PODFILE CHECKSUM: 0331b4a0b328c13517c8ddfa8d763ea8ffe69c8a
+PODFILE CHECKSUM: c435c1077a962bb4092ebe446ca7102f718c44a8
 
 COCOAPODS: 1.10.1

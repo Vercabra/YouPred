@@ -19,6 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        return GIDSignIn.sharedInstance().handle(url)
+    }
+    
     private func configureWindow() {
         window = try? container.resolve()
         window?.makeKeyAndVisible()
@@ -34,7 +38,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func configureFirebase() {
-        // FirebaseApp.configure()
+        FirebaseApp.configure()
+        GIDSignIn.sharedInstance()?.clientID = FirebaseApp.app()?.options.clientID
+        logoutIfNeeded()
+    }
+    
+    private func logoutIfNeeded() {
+        let userDefaults = UserDefaults.standard
+        if userDefaults.value(forKey: "appFirstTimeOpend") == nil {
+            userDefaults.setValue(true, forKey: "appFirstTimeOpend")
+            do {
+                try Auth.auth().signOut()
+            } catch {
+                print("Error: \(error.localizedDescription)")
+            }
+        }
     }
 }
 

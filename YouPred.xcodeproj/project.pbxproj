@@ -42,6 +42,9 @@
 		6AC62BE22719A5EA0040087E /* PlotView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AC62BE12719A5EA0040087E /* PlotView.xib */; };
 		6AC62BE42719B3580040087E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AC62BE32719B3580040087E /* Colors.xcassets */; };
 		6AC62BE72719B61D0040087E /* AuthViewModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC62BE62719B61D0040087E /* AuthViewModelMapper.swift */; };
+		6AC62BE92719DBC30040087E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6AC62BE82719DBC30040087E /* GoogleService-Info.plist */; };
+		6AC62BEC2719DFF60040087E /* API+Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC62BEB2719DFF60040087E /* API+Auth.swift */; };
+		6AC62BEE2719E08D0040087E /* AuthViewModelServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC62BED2719E08D0040087E /* AuthViewModelServices.swift */; };
 		EA442FEDA14D6E25514918C5 /* Pods_YouPred.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C19ED34B0DD29D1530343A8 /* Pods_YouPred.framework */; };
 		FFB8E0C3CC4FFF992ED8A27B /* Pods_YouPred_YouPredUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D158303BA1FE937A021B27D /* Pods_YouPred_YouPredUITests.framework */; };
 /* End PBXBuildFile section */
@@ -109,6 +112,9 @@
 		6AC62BE12719A5EA0040087E /* PlotView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlotView.xib; sourceTree = "<group>"; };
 		6AC62BE32719B3580040087E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		6AC62BE62719B61D0040087E /* AuthViewModelMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModelMapper.swift; sourceTree = "<group>"; };
+		6AC62BE82719DBC30040087E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6AC62BEB2719DFF60040087E /* API+Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Auth.swift"; sourceTree = "<group>"; };
+		6AC62BED2719E08D0040087E /* AuthViewModelServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModelServices.swift; sourceTree = "<group>"; };
 		AFBEE2B7050D268C54946329 /* Pods-YouPred.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouPred.debug.xcconfig"; path = "Target Support Files/Pods-YouPred/Pods-YouPred.debug.xcconfig"; sourceTree = "<group>"; };
 		BECBFBFBBA4B12AD5ABD120B /* Pods-YouPredTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouPredTests.release.xcconfig"; path = "Target Support Files/Pods-YouPredTests/Pods-YouPredTests.release.xcconfig"; sourceTree = "<group>"; };
 		C6E227BAEE5F4FE1A9DBEE55 /* Pods-YouPred-YouPredUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouPred-YouPredUITests.release.xcconfig"; path = "Target Support Files/Pods-YouPred-YouPredUITests/Pods-YouPred-YouPredUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -183,6 +189,7 @@
 				6A94D512270C67A8004FA2E9 /* AppDelegates */,
 				6A94D515270C6AE1004FA2E9 /* Shared */,
 				6A94D531270C6E87004FA2E9 /* Services */,
+				6AC62BEA2719DFDF0040087E /* APIServices */,
 				6A94D53E270C7104004FA2E9 /* Scenes */,
 				6A94D53B270C70B1004FA2E9 /* Resources */,
 			);
@@ -366,6 +373,7 @@
 			isa = PBXGroup;
 			children = (
 				6A94D4EE270C64EB004FA2E9 /* Info.plist */,
+				6AC62BE82719DBC30040087E /* GoogleService-Info.plist */,
 			);
 			path = Plists;
 			sourceTree = "<group>";
@@ -455,8 +463,17 @@
 			isa = PBXGroup;
 			children = (
 				6AC62BE62719B61D0040087E /* AuthViewModelMapper.swift */,
+				6AC62BED2719E08D0040087E /* AuthViewModelServices.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		6AC62BEA2719DFDF0040087E /* APIServices */ = {
+			isa = PBXGroup;
+			children = (
+				6AC62BEB2719DFF60040087E /* API+Auth.swift */,
+			);
+			path = APIServices;
 			sourceTree = "<group>";
 		};
 		7BAF34ADEF4DBDE645704C4B /* Pods */ = {
@@ -484,6 +501,7 @@
 				6A94D4DA270C64E5004FA2E9 /* Frameworks */,
 				6A94D4DB270C64E5004FA2E9 /* Resources */,
 				163CBB0B1283BC586552B3FA /* [CP] Embed Pods Frameworks */,
+				335F1E1570E6353792949EFD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -522,6 +540,7 @@
 				6A94D4FB270C64EC004FA2E9 /* Frameworks */,
 				6A94D4FC270C64EC004FA2E9 /* Resources */,
 				F1D67E79F502DB4320ED72F3 /* [CP] Embed Pods Frameworks */,
+				4F70A953E80BE126A19A917B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -586,6 +605,7 @@
 				6AC62BE42719B3580040087E /* Colors.xcassets in Resources */,
 				6AC62BE22719A5EA0040087E /* PlotView.xib in Resources */,
 				6A94D4EA270C64EB004FA2E9 /* Images.xcassets in Resources */,
+				6AC62BE92719DBC30040087E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -621,6 +641,40 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YouPred/Pods-YouPred-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		335F1E1570E6353792949EFD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YouPred/Pods-YouPred-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YouPred/Pods-YouPred-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YouPred/Pods-YouPred-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F70A953E80BE126A19A917B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YouPred-YouPredUITests/Pods-YouPred-YouPredUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YouPred-YouPredUITests/Pods-YouPred-YouPredUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YouPred-YouPredUITests/Pods-YouPred-YouPredUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C954DF5CCCAAA7D2D12CE6E4 /* [CP] Check Pods Manifest.lock */ = {
@@ -713,6 +767,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AC62BEC2719DFF60040087E /* API+Auth.swift in Sources */,
 				6A94D53A270C6F96004FA2E9 /* RoutingTargetProvider.swift in Sources */,
 				6AC62BD82719A4DA0040087E /* PlotViewController.swift in Sources */,
 				6A94D545270C71D4004FA2E9 /* NonReusableViewProtocol.swift in Sources */,
@@ -736,6 +791,7 @@
 				6A94D548270C7417004FA2E9 /* AuthRoutingProtocol.swift in Sources */,
 				6AC62BDA2719A4E60040087E /* PlotViewModelProtocol.swift in Sources */,
 				6A94D4E1270C64E5004FA2E9 /* AppDelegate.swift in Sources */,
+				6AC62BEE2719E08D0040087E /* AuthViewModelServices.swift in Sources */,
 				6A94D523270C6C62004FA2E9 /* UIView+extensions.swift in Sources */,
 				6A94D51E270C6BAB004FA2E9 /* BaseViewModel.swift in Sources */,
 				6A94D530270C6E58004FA2E9 /* SessionRoutingProtocol.swift in Sources */,

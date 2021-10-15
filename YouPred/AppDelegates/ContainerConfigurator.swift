@@ -13,6 +13,7 @@ enum ContainerConfigurator {
     static func configure(_ c: DependencyContainer) -> DependencyContainer {
         container = c
         registerServices(inContainer: c)
+        registerModelServices(inContainer: c)
         registerFactories(inContainer: c)
         registerRouters(inContainer: c)
         registerViewModels(inContainer: c)
@@ -24,6 +25,12 @@ enum ContainerConfigurator {
     static func registerServices(inContainer c: DependencyContainer) {
         c.register(.singleton) { RoutingTargetProvider(window: try c.resolve()) as RoutingTargetProviderProtocol }
         c.register(.singleton) { SessionService() as SessionServiceProtocol }
+        c.register(.singleton) { AuthService() as AuthServiceProtocol }
+
+    }
+    
+    static func registerModelServices(inContainer c: DependencyContainer) {
+        c.register { AuthViewModelServices(authService: try c.resolve(), sessionService: try c.resolve()) as AuthViewModelServicesProtocol }
     }
     
     static func registerFactories(inContainer c: DependencyContainer) {
@@ -39,7 +46,7 @@ enum ContainerConfigurator {
     
     static func registerViewModels(inContainer c: DependencyContainer) {
         c.register(.unique) { StartUpViewModel(sessionService: try c.resolve()) as StartUpViewModelProtocol }
-        c.register(.unique) { AuthViewModel(mapper: try c.resolve()) as AuthViewModelProtocol }
+        c.register(.unique) { AuthViewModel(mapper: try c.resolve(), services: try c.resolve()) as AuthViewModelProtocol }
         c.register(.unique) { PlotViewModel() as PlotViewModelProtocol }
     }
     
