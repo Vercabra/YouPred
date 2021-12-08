@@ -42,7 +42,7 @@ class SearchViewModel: BaseViewModel, SearchViewModelProtocol {
         actions.logoutButtonDidPress.asObservable().subscribe(onNext: { [weak self] in
             self?.session.wrappedValue?.logout()
             self?.router?.routeToAuthorization()
-        })
+        }).disposed(by: disposeBag)
     }
     
     private func showFilterView() {
