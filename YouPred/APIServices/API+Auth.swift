@@ -16,6 +16,7 @@ protocol AuthServiceProtocol {
     var currentUser: FirebaseAuth.User? { get }
     func getAuthorizationStatus() -> Single<(Auth, FirebaseAuth.User?)>
     func signIn(with googleCredentials: AuthCredential) -> Single<(AuthDataResult?, Error?)>
+    func signOut()
 }
 
 class AuthService: AuthServiceProtocol {
@@ -38,5 +39,9 @@ class AuthService: AuthServiceProtocol {
             }
             return Disposables.create()
         }
+    }
+    
+    func signOut() {
+        try? Auth.auth().signOut()
     }
 }

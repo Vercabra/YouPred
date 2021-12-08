@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="SearchViewController" customModule="YouPred" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YouTube Search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07A-Vx-ZIf">
+                                <rect key="frame" x="108" y="74" width="198" height="35"/>
+                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zdP-UR-vHj">
+                                <rect key="frame" x="16" y="173" width="382" height="64"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Search" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q72-V8-Ob3">
+                                        <rect key="frame" x="16" y="10" width="350" height="44"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="q72-V8-Ob3" secondAttribute="trailing" constant="16" id="4XE-I0-P5j"/>
+                                    <constraint firstItem="q72-V8-Ob3" firstAttribute="top" secondItem="zdP-UR-vHj" secondAttribute="top" constant="10" id="6Bf-vJ-jBJ"/>
+                                    <constraint firstAttribute="height" constant="64" id="dtW-r5-5iG"/>
+                                    <constraint firstAttribute="bottom" secondItem="q72-V8-Ob3" secondAttribute="bottom" constant="10" id="nFf-Ua-lVl"/>
+                                    <constraint firstItem="q72-V8-Ob3" firstAttribute="leading" secondItem="zdP-UR-vHj" secondAttribute="leading" constant="16" id="nIW-3a-TYV"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="32"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search history" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWR-VV-xLU">
+                                <rect key="frame" x="134.5" y="434" width="145" height="28"/>
+                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PYh-AA-JMb">
+                                <rect key="frame" x="337" y="75.5" width="61" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="61" id="2My-nH-wNY"/>
+                                    <constraint firstAttribute="height" constant="32" id="V67-dx-S1c"/>
+                                </constraints>
+                                <color key="tintColor" red="0.20392156862745098" green="0.7803921568627451" blue="0.55721955652378141" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Filter">
+                                            <attributes>
+                                                <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ds-Cv-xdN">
+                                <rect key="frame" x="151" y="255" width="112" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="5lt-Un-wVv"/>
+                                    <constraint firstAttribute="width" constant="112" id="Aq8-6z-JNg"/>
+                                </constraints>
+                                <color key="tintColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.55721955649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Search">
+                                            <attributes>
+                                                <font key="NSFont" size="21" name="Helvetica-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t92-oB-qC1">
+                                <rect key="frame" x="157" y="810" width="100" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="5EY-FS-HT6"/>
+                                    <constraint firstAttribute="height" constant="42" id="fgc-Es-aL5"/>
+                                </constraints>
+                                <color key="tintColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.55721955649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Logout">
+                                            <attributes>
+                                                <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="appBackground"/>
+                        <constraints>
+                            <constraint firstItem="PYh-AA-JMb" firstAttribute="centerY" secondItem="07A-Vx-ZIf" secondAttribute="centerY" id="4eT-pq-zlR"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="t92-oB-qC1" secondAttribute="bottom" constant="10" id="74h-8y-WTQ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="PYh-AA-JMb" secondAttribute="trailing" constant="16" id="AK6-zA-FXg"/>
+                            <constraint firstItem="07A-Vx-ZIf" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="topMargin" constant="30" id="ClF-8X-Oxf"/>
+                            <constraint firstItem="gWR-VV-xLU" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="M7R-Xs-bDt"/>
+                            <constraint firstItem="gWR-VV-xLU" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="Ov3-RO-F9G"/>
+                            <constraint firstItem="t92-oB-qC1" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Uvt-Z1-8EE"/>
+                            <constraint firstItem="zdP-UR-vHj" firstAttribute="top" secondItem="07A-Vx-ZIf" secondAttribute="bottom" constant="64" id="Yr9-CU-T8d"/>
+                            <constraint firstItem="07A-Vx-ZIf" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="gdQ-Xj-Jva"/>
+                            <constraint firstItem="zdP-UR-vHj" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="iyq-IL-BrR"/>
+                            <constraint firstItem="7ds-Cv-xdN" firstAttribute="top" secondItem="zdP-UR-vHj" secondAttribute="bottom" constant="18" id="mSC-d1-INN"/>
+                            <constraint firstItem="7ds-Cv-xdN" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ojn-8g-0o7"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="zdP-UR-vHj" secondAttribute="trailing" constant="16" id="xyG-Xu-aIh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="filterButton" destination="PYh-AA-JMb" id="IC0-ml-Mv1"/>
+                        <outlet property="logoutButton" destination="t92-oB-qC1" id="9ex-XU-oak"/>
+                        <outlet property="searchButton" destination="7ds-Cv-xdN" id="puS-dR-KXZ"/>
+                        <outlet property="searchField" destination="q72-V8-Ob3" id="mnK-56-ia8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="121.73913043478262" y="120.53571428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="appBackground">
+            <color red="0.094117647058823528" green="0.094117647058823528" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

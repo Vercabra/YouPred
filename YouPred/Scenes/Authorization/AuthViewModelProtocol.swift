@@ -33,6 +33,6 @@ class AuthViewModel: BaseViewModel, AuthViewModelProtocol, Routable {
     private func setupLoggedInUser(user: FirebaseAuth.User?) {
         guard let user = user else { return }
         services.sessionService.setup(user: user)
-        router?.routeToPlot(animated: true)
+        router?.routeToSearch(animated: true)
     }
 }

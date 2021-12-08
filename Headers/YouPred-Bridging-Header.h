@@ -20,3 +20,4 @@
 @import Firebase;
 @import Charts;
 @import GoogleSignIn;
+@import SwiftEntryKit;

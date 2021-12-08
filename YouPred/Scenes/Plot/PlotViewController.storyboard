@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -18,22 +19,60 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="goI-hW-idV" customClass="PlotView" customModule="YouPred" customModuleProvider="target">
-                                <rect key="frame" x="5" y="248" width="404" height="300"/>
+                                <rect key="frame" x="5" y="133" width="404" height="300"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="ULL-Rn-HD4"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Request statistics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PuE-yG-gqX">
+                                <rect key="frame" x="96.5" y="74" width="221" height="35"/>
+                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flX-Ot-EuY">
+                                <rect key="frame" x="16" y="75.5" width="61" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="Vzm-tK-Hcf"/>
+                                    <constraint firstAttribute="width" constant="61" id="s8S-6a-lyd"/>
+                                </constraints>
+                                <color key="tintColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.55721955649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Back">
+                                            <attributes>
+                                                <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The top 5 videos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FIy-9G-77A">
+                                <rect key="frame" x="126.5" y="481" width="161" height="28"/>
+                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="appBackground"/>
                         <constraints>
+                            <constraint firstItem="PuE-yG-gqX" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="topMargin" constant="30" id="FbK-M1-6X4"/>
+                            <constraint firstItem="PuE-yG-gqX" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="S3i-Ff-0BD"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="goI-hW-idV" secondAttribute="trailing" constant="5" id="S9l-bA-jzk"/>
-                            <constraint firstItem="goI-hW-idV" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="-50" id="Vd5-jv-vrR"/>
+                            <constraint firstItem="FIy-9G-77A" firstAttribute="top" secondItem="goI-hW-idV" secondAttribute="bottom" constant="48" id="dUo-A5-O2a"/>
+                            <constraint firstItem="flX-Ot-EuY" firstAttribute="centerY" secondItem="PuE-yG-gqX" secondAttribute="centerY" id="ezY-5O-gA5"/>
+                            <constraint firstItem="flX-Ot-EuY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="nB4-La-Vy1"/>
                             <constraint firstItem="goI-hW-idV" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="5" id="qII-rv-Sdp"/>
+                            <constraint firstItem="FIy-9G-77A" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="svU-Zo-VvJ"/>
+                            <constraint firstItem="goI-hW-idV" firstAttribute="top" secondItem="PuE-yG-gqX" secondAttribute="bottom" constant="24" id="zcQ-BY-evW"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="flX-Ot-EuY" id="eln-bf-JIb"/>
                         <outlet property="plotView" destination="goI-hW-idV" id="gAz-PS-590"/>
                     </connections>
                 </viewController>

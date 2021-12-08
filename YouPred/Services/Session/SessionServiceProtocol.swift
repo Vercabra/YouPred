@@ -8,10 +8,12 @@
 protocol SessionServiceProtocol {
     var user: BehaviorRelay<FirebaseAuth.User?> { get }
     func setup(user: FirebaseAuth.User)
+    func logout()
 }
 
 class SessionService: BaseService, SessionServiceProtocol {
     let user: BehaviorRelay<FirebaseAuth.User?> = .init(value: nil)
+    let authService: Injected<AuthServiceProtocol> = .init()
     
     override init() {
         super.init()
@@ -21,8 +23,9 @@ class SessionService: BaseService, SessionServiceProtocol {
         self.user.accept(user)
     }
     
-    func logout(router: RoutingProtocol?) {
-        
+    func logout() {
+        user.accept(nil)
+        authService.wrappedValue?.signOut()
     }
 }
 

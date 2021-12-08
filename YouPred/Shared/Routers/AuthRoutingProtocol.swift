@@ -7,7 +7,7 @@
 
 protocol AuthRoutingProtocol {
     func routeToAuthorization()
-    func routeToPlot(animated: Bool)
+    func routeToSearch(animated: Bool)
 }
 
 extension BaseRouting: AuthRoutingProtocol {
@@ -24,10 +24,10 @@ extension BaseRouting: AuthRoutingProtocol {
         }
     }
     
-    func routeToPlot(animated: Bool) {
+    func routeToSearch(animated: Bool) {
         do {
-            let viewModel: PlotViewModelProtocol = try viewModelsFactory.buildViewModel()
-            let vc = try viewsFactory.buildView(viewModel) as PlotViewController
+            let viewModel: SearchViewModelProtocol = try viewModelsFactory.buildViewModel()
+            let vc = try viewsFactory.buildView(viewModel) as SearchViewController
             let navigation = UINavigationController(rootViewController: vc)
             navigation.isNavigationBarHidden = true
             if animated {

@@ -470,6 +470,7 @@ PODS:
   - nanopb/decode (2.30908.0)
   - nanopb/encode (2.30908.0)
   - PromisesObjC (2.0.0)
+  - QuickLayout (3.0.0)
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
@@ -479,6 +480,8 @@ PODS:
   - RxRelay (5.1.1):
     - RxSwift (~> 5)
   - RxSwift (5.1.2)
+  - SwiftEntryKit (1.2.7):
+    - QuickLayout (= 3.0.0)
 
 DEPENDENCIES:
   - Alamofire
@@ -499,6 +502,7 @@ DEPENDENCIES:
   - RxCocoa
   - RxOptional
   - RxSwift
+  - SwiftEntryKit
 
 SPEC REPOS:
   trunk:
@@ -530,10 +534,12 @@ SPEC REPOS:
     - LoadableViews
     - nanopb
     - PromisesObjC
+    - QuickLayout
     - RxCocoa
     - RxOptional
     - RxRelay
     - RxSwift
+    - SwiftEntryKit
 
 EXTERNAL SOURCES:
   AppRouter:
@@ -574,11 +580,13 @@ SPEC CHECKSUMS:
   LoadableViews: 9af367c30a6fd96cf62275db64b7b1568e3bd0ac
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
+  QuickLayout: 07b45a72b10083fee3f095990cfed1c1e7b27f0a
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxOptional: b1fcd60856807a564c0215c2184b8d33e7826dc2
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 1e2e1f9570186967f617e49128ed26ccf1bafc8e
+  SwiftEntryKit: 537c92699d6034efb1ef9c32b11e0b37c97aa589
 
-PODFILE CHECKSUM: c435c1077a962bb4092ebe446ca7102f718c44a8
+PODFILE CHECKSUM: 209fc3cc95e389c8d35923206f487914282fc9e9
 
 COCOAPODS: 1.10.1

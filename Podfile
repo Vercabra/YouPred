@@ -27,6 +27,7 @@ target 'YouPred' do
   pod 'AppRouter/RxSwift', :git => 'https://github.com/hellbit/AppRouter.git'
 
   pod 'IQKeyboardManagerSwift'
+  pod 'SwiftEntryKit'
   
   target 'YouPredTests' do
     inherit! :search_paths

@@ -48,6 +48,7 @@ enum ContainerConfigurator {
         c.register(.unique) { StartUpViewModel(sessionService: try c.resolve()) as StartUpViewModelProtocol }
         c.register(.unique) { AuthViewModel(mapper: try c.resolve(), services: try c.resolve()) as AuthViewModelProtocol }
         c.register(.unique) { PlotViewModel() as PlotViewModelProtocol }
+        c.register(.unique) { SearchViewModel(mapper: try c.resolve()) as SearchViewModelProtocol }
     }
     
     static func registerViews(inContainer c: DependencyContainer) {
@@ -70,10 +71,12 @@ enum ContainerConfigurator {
         }
         
         c.register { (viewModel: AuthViewModelProtocol) ->  AuthViewController in try resolve(viewModel) }
+        c.register { (viewModel: SearchViewModelProtocol) -> SearchViewController in try resolve(viewModel) }
         c.register { (viewModel: PlotViewModelProtocol) ->  PlotViewController in try resolve(viewModel) }
     }
     
     static func registerMappers(inContainer c: DependencyContainer) {
         c.register { AuthViewModelMapper() as AuthViewModelMapperProtocol }
+        c.register { SearchViewModelMapper() as SearchViewModelMapperProtocol }
     }
 }

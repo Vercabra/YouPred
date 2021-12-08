@@ -5,7 +5,7 @@
 //  Created by Dmitriy Dmitriyev on 05.10.2021.
 //
 
-protocol RoutingProtocol: SessionRoutingProtocol, AuthRoutingProtocol {}
+protocol RoutingProtocol: SessionRoutingProtocol, AuthRoutingProtocol, SearchRoutingProtocol {}
 
 class BaseRouting: BaseService, RoutingProtocol {
     let viewsFactory: ViewFactoryProtocol
