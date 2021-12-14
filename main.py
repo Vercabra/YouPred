@@ -9,45 +9,47 @@ def analysis():
     youtube = build('youtube', 'v3', developerKey=api_key)
 
 
-    request = youtube.search().list(  # request method that collect data
-        part='snippet',  # part of returned dict
-        q='Planets',  # search parameter
-        maxResults='50',
-        order='date'
-    )
+    # Processing video's data by id
+    def process_by_id(video_id: list):
+    full_response = []
+    for v_id in video_id:
+        v_request = youtube.videos().list(
+            part='snippet,contentDetails,statistics',
+            id=v_id
+        )
+        i_response = v_request.execute()
+        full_response.append((i_response['items'][0]['snippet']['publishedAt'],
+                              int((i_response['items'][0]['statistics']['viewCount'])),
+                              i_response['items'][0]['snippet']['title']))
 
-    response = request.execute()  # making from request response dict
-    search_id = []  # video id, needed to get video statistics
+    full_response.sort(key=itemgetter(0))
+    X_Y = []
+    for c in full_response:
+        X_Y.append((c[0], c[1], c[2]))
+    return X_Y
 
 
-    for j in range(50):  # to get each video search result's id
-        search_res_id = response['items'][j]['id']
-        search_id.append(search_res_id.get('videoId'))
-
-
-    full_video_response = []  # the results with statistics
-    for i in search_id:
-        if type(i) is str:  # getting results by video_id
-            request = youtube.videos().list(
-                part='snippet,contentDetails,statistics',
-                id=str(i)
+    # VIEW API DOC BEFORE USE THIS FUNCTION! ALL RESULTS SORTED BY DATE
+    # 'q' - search string, 'r_a' - amount of videos, 'o' - sorting order
+    def get_search_stat(question: str, res_amount: int):
+        # collect videoId to get detailed information by video
+        video_id = []  # contains video ids we will use later
+        next_token = ''  # needed to collect next page data
+        page_am = math.ceil(res_amount / 50)  # how many page we are parsing
+        for i in range(page_am):
+            request = youtube.search().list(  # request method that collect data
+                part='snippet',  # part of returned dict
+                q=question,  # search request field
+                maxResults=res_amount - 50 * (page_am - (i + 1)),  # how many results per page
+                pageToken=next_token,
+                type='video',
             )
-            i_response = request.execute()
-            full_video_response.append((i_response['items'][0]['snippet']['title'],
-                                        i_response['items'][0]['snippet']['publishedAt'],
-                                        int((i_response['items'][0]['statistics']['viewCount']))))  # collecting only needed
-
-    dates = []
-    views = []
-    for i in full_video_response:
-        dates.append(i[1][:10])
-        views.append(i[2])
-
-
-    view_sr = pd.Series(views, dates)
-    view_sr.plot()
-    # plt.show()
-    return(view_sr)
+            response = request.execute()
+            for j in range(len(response['items'])):  # collecting Ids
+                video_id.append(response['items'][j]['id']['videoId'])
+            if response['pageInfo']['resultsPerPage'] >= 50:
+                next_token = response['nextPageToken']  # get next page token
+        return process_by_id(video_id)
 
 print(analysis())
 
