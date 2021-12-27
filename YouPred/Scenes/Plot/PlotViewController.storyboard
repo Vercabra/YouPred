@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="goI-hW-idV" customClass="PlotView" customModule="YouPred" customModuleProvider="target">
-                                <rect key="frame" x="5" y="133" width="404" height="300"/>
+                                <rect key="frame" x="25" y="133" width="364" height="300"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="ULL-Rn-HD4"/>
@@ -50,9 +50,21 @@
                                     </attributedString>
                                 </buttonConfiguration>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The top 5 videos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FIy-9G-77A">
-                                <rect key="frame" x="126.5" y="481" width="161" height="28"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The top 5 videos (Soon)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FIy-9G-77A">
+                                <rect key="frame" x="91.5" y="481" width="231" height="28"/>
                                 <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video length" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="349-nM-Zfq">
+                                <rect key="frame" x="176" y="438" width="62" height="14"/>
+                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Views" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J9I-cZ-qhw">
+                                <rect key="frame" x="-3" y="276" width="30" height="14"/>
+                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="12"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -60,13 +72,17 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="appBackground"/>
                         <constraints>
+                            <constraint firstItem="J9I-cZ-qhw" firstAttribute="centerY" secondItem="goI-hW-idV" secondAttribute="centerY" id="6Xm-A0-Wcg"/>
                             <constraint firstItem="PuE-yG-gqX" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="topMargin" constant="30" id="FbK-M1-6X4"/>
                             <constraint firstItem="PuE-yG-gqX" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="S3i-Ff-0BD"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="goI-hW-idV" secondAttribute="trailing" constant="5" id="S9l-bA-jzk"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="goI-hW-idV" secondAttribute="trailing" constant="25" id="S9l-bA-jzk"/>
+                            <constraint firstItem="349-nM-Zfq" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="cHz-z8-ks8"/>
                             <constraint firstItem="FIy-9G-77A" firstAttribute="top" secondItem="goI-hW-idV" secondAttribute="bottom" constant="48" id="dUo-A5-O2a"/>
                             <constraint firstItem="flX-Ot-EuY" firstAttribute="centerY" secondItem="PuE-yG-gqX" secondAttribute="centerY" id="ezY-5O-gA5"/>
+                            <constraint firstItem="349-nM-Zfq" firstAttribute="top" secondItem="goI-hW-idV" secondAttribute="bottom" constant="5" id="i63-zK-nM1"/>
+                            <constraint firstItem="goI-hW-idV" firstAttribute="leading" secondItem="J9I-cZ-qhw" secondAttribute="trailing" constant="-2" id="mvv-f0-ulh"/>
                             <constraint firstItem="flX-Ot-EuY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="nB4-La-Vy1"/>
-                            <constraint firstItem="goI-hW-idV" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="5" id="qII-rv-Sdp"/>
+                            <constraint firstItem="goI-hW-idV" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="qII-rv-Sdp"/>
                             <constraint firstItem="FIy-9G-77A" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="svU-Zo-VvJ"/>
                             <constraint firstItem="goI-hW-idV" firstAttribute="top" secondItem="PuE-yG-gqX" secondAttribute="bottom" constant="24" id="zcQ-BY-evW"/>
                         </constraints>
@@ -74,6 +90,7 @@
                     <connections>
                         <outlet property="backButton" destination="flX-Ot-EuY" id="eln-bf-JIb"/>
                         <outlet property="plotView" destination="goI-hW-idV" id="gAz-PS-590"/>
+                        <outlet property="viewsLabel" destination="J9I-cZ-qhw" id="z5d-Bt-M5H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

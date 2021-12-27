@@ -30,6 +30,9 @@ class SearchViewController: BaseViewController, NonReusableViewProtocol {
         searchField.rx.text.bind(to: viewModel.mapper.searchText)
             .disposed(by: viewModelDisposeBag)
         
+        searchField.rx.text.map{ ($0 ?? "").isNotEmpty}.bind(to: searchButton.rx.isEnabled)
+            .disposed(by: viewModelDisposeBag)
+        
         searchButton.rx.tap.bind(to: viewModel.actions.searchButtonDidPress)
             .disposed(by: viewModelDisposeBag)
         

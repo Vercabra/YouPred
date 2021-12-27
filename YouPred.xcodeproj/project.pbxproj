@@ -42,6 +42,7 @@
 		6A94D54F270C759B004FA2E9 /* ViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A94D54E270C759B004FA2E9 /* ViewModelFactory.swift */; };
 		6A94D552270C78FD004FA2E9 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A94D551270C78FD004FA2E9 /* Injection.swift */; };
 		6A94D554270C7A0F004FA2E9 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A94D553270C7A0F004FA2E9 /* BaseService.swift */; };
+		6ABA26E527774D7F00C25A8E /* API+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABA26E427774D7F00C25A8E /* API+Search.swift */; };
 		6AC62BD82719A4DA0040087E /* PlotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC62BD72719A4DA0040087E /* PlotViewController.swift */; };
 		6AC62BDA2719A4E60040087E /* PlotViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC62BD92719A4E60040087E /* PlotViewModelProtocol.swift */; };
 		6AC62BDC2719A4F30040087E /* PlotViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AC62BDB2719A4F30040087E /* PlotViewController.storyboard */; };
@@ -119,6 +120,7 @@
 		6A94D54E270C759B004FA2E9 /* ViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelFactory.swift; sourceTree = "<group>"; };
 		6A94D551270C78FD004FA2E9 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
 		6A94D553270C7A0F004FA2E9 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		6ABA26E427774D7F00C25A8E /* API+Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Search.swift"; sourceTree = "<group>"; };
 		6AC62BD72719A4DA0040087E /* PlotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlotViewController.swift; sourceTree = "<group>"; };
 		6AC62BD92719A4E60040087E /* PlotViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlotViewModelProtocol.swift; sourceTree = "<group>"; };
 		6AC62BDB2719A4F30040087E /* PlotViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PlotViewController.storyboard; sourceTree = "<group>"; };
@@ -517,6 +519,7 @@
 			isa = PBXGroup;
 			children = (
 				6AC62BEB2719DFF60040087E /* API+Auth.swift */,
+				6ABA26E427774D7F00C25A8E /* API+Search.swift */,
 			);
 			path = APIServices;
 			sourceTree = "<group>";
@@ -820,6 +823,7 @@
 				6AC62BD82719A4DA0040087E /* PlotViewController.swift in Sources */,
 				6A94D545270C71D4004FA2E9 /* NonReusableViewProtocol.swift in Sources */,
 				6A94D51C270C6B6F004FA2E9 /* BaseViewController.swift in Sources */,
+				6ABA26E527774D7F00C25A8E /* API+Search.swift in Sources */,
 				6A94D52B270C6D8C004FA2E9 /* Localization.swift in Sources */,
 				6A94D554270C7A0F004FA2E9 /* BaseService.swift in Sources */,
 				6A94D520270C6BEC004FA2E9 /* BaseLoadableView.swift in Sources */,

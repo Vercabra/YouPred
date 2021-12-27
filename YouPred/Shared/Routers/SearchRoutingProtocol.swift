@@ -6,15 +6,16 @@
 //
 
 protocol SearchRoutingProtocol {
-    func routeToPlot(animated: Bool)
+    func routeToPlot(data: [[Double]], animated: Bool)
     func routeToAuthorization()
 }
 
 extension BaseRouting: SearchRoutingProtocol {
     
-    func routeToPlot(animated: Bool) {
+    func routeToPlot(data: [[Double]],animated: Bool) {
         do {
-            let viewModel: PlotViewModelProtocol = try viewModelsFactory.buildViewModel()
+            var viewModel: PlotViewModelProtocol = try viewModelsFactory.buildViewModel()
+            viewModel.data = data
             let vc = try viewsFactory.buildView(viewModel) as PlotViewController
             let navigation = UINavigationController(rootViewController: vc)
             navigation.isNavigationBarHidden = true
@@ -27,4 +28,5 @@ extension BaseRouting: SearchRoutingProtocol {
             print(error.localizedDescription)
         }
     }
+    
 }

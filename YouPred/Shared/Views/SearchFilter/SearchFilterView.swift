@@ -8,6 +8,7 @@
 class SearchFilterView: BaseLoadableView {
     @IBOutlet private weak var sortingControl: UISegmentedControl!
     @IBOutlet private weak var duranceControl: UISegmentedControl!
+    @IBOutlet weak var saveButton: UIButton!
     
     func configure() {
         sortingControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: .selected)

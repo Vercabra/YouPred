@@ -26,6 +26,7 @@ enum ContainerConfigurator {
         c.register(.singleton) { RoutingTargetProvider(window: try c.resolve()) as RoutingTargetProviderProtocol }
         c.register(.singleton) { SessionService() as SessionServiceProtocol }
         c.register(.singleton) { AuthService() as AuthServiceProtocol }
+        c.register(.singleton) { SearchService() as SearchServiceProtocol }
 
     }
     

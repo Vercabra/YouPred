@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchFilterView" customModule="YouPred" customModuleProvider="target">
             <connections>
                 <outlet property="duranceControl" destination="eGs-Sy-oJ0" id="L6r-Gq-sEw"/>
+                <outlet property="saveButton" destination="6yt-1A-PWi" id="oNA-gJ-onV"/>
                 <outlet property="sortingControl" destination="fsD-QK-B2Q" id="WHD-yJ-YYi"/>
             </connections>
         </placeholder>
@@ -57,26 +58,39 @@
                     </segments>
                     <color key="selectedSegmentTintColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.55721955649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </segmentedControl>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Future updates" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2yk-P4-1Ti">
-                    <rect key="frame" x="124" y="236" width="102" height="19"/>
-                    <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="16"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6yt-1A-PWi">
+                    <rect key="frame" x="100" y="236" width="150" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="F6m-6a-ylp"/>
+                        <constraint firstAttribute="height" constant="50" id="NMk-9j-pN8"/>
+                    </constraints>
+                    <color key="tintColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.55721955649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain">
+                        <attributedString key="attributedTitle">
+                            <fragment content="Save">
+                                <attributes>
+                                    <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                    </buttonConfiguration>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" name="appBackground"/>
             <constraints>
                 <constraint firstItem="KSb-3E-NsY" firstAttribute="top" secondItem="fsD-QK-B2Q" secondAttribute="bottom" constant="18" id="KMF-n5-WSn"/>
                 <constraint firstItem="jT0-kE-1lH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="22" id="LAf-p4-kkC"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="6yt-1A-PWi" secondAttribute="bottom" constant="10" id="LhU-59-RDG"/>
                 <constraint firstItem="fsD-QK-B2Q" firstAttribute="top" secondItem="jT0-kE-1lH" secondAttribute="bottom" constant="5" id="MyZ-Id-Roe"/>
                 <constraint firstItem="KSb-3E-NsY" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="NOC-ck-Nxt"/>
-                <constraint firstItem="2yk-P4-1Ti" firstAttribute="top" secondItem="eGs-Sy-oJ0" secondAttribute="bottom" constant="48" id="PNT-gJ-aod"/>
                 <constraint firstItem="jT0-kE-1lH" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="WrC-a1-Jjx"/>
                 <constraint firstItem="eGs-Sy-oJ0" firstAttribute="top" secondItem="KSb-3E-NsY" secondAttribute="bottom" constant="5" id="YVa-df-WZF"/>
                 <constraint firstItem="fsD-QK-B2Q" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="mNc-Vy-hGG"/>
-                <constraint firstItem="2yk-P4-1Ti" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="qM1-Li-t8I"/>
                 <constraint firstItem="eGs-Sy-oJ0" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="qf5-Ah-Ij7"/>
+                <constraint firstItem="6yt-1A-PWi" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="xGD-jd-ICe"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <userDefinedRuntimeAttributes>

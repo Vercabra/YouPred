@@ -5,11 +5,13 @@
 //  Created by Dmitriy Dmitriyev on 15.10.2021.
 //
 
+import Charts
+
 class PlotView: BaseLoadableView {
-    @IBOutlet private weak var plotView: ScatterChartView!
+    @IBOutlet private weak var plotView: LineChartView!
     
     var data: [[Double]]?
-    var dataSet: ScatterChartDataSet?
+    var dataSet: LineChartDataSet?
     
     func configurePlot(data: [[Double]]) {
         self.data = data
@@ -29,10 +31,10 @@ class PlotView: BaseLoadableView {
     
     private func setupData() {
         let dataEntries = generateData()
-        let dataSet = ScatterChartDataSet(entries: dataEntries, label: "DataSet")
-        dataSet.scatterShapeSize = 4
-        dataSet.setScatterShape(.circle)
-        plotView.data = ScatterChartData(dataSet: dataSet)
+        let dataSet = LineChartDataSet(entries: dataEntries, label: "Videos")
+        dataSet.circleRadius = 4
+        dataSet.circleHoleRadius = 2
+        plotView.data = LineChartData(dataSet: dataSet)
         self.dataSet = dataSet
     }
     

@@ -22,6 +22,7 @@ class SearchViewModel: BaseViewModel, SearchViewModelProtocol {
     let mapper: SearchViewModelMapperProtocol
     let actions: SearchViewModelActions = .init()
     let session: Injected<SessionServiceProtocol> = .init()
+    let searchService: Injected<SearchServiceProtocol> = .init()
     var router: SearchRoutingProtocol? { baseRouter }
     
     init(mapper: SearchViewModelMapperProtocol) {
@@ -32,7 +33,12 @@ class SearchViewModel: BaseViewModel, SearchViewModelProtocol {
     
     private func observeActions() {
         actions.searchButtonDidPress.asObservable().subscribe(onNext: { [weak self] in
-            self?.router?.routeToPlot(animated: true)
+            guard let self = self, let searchText = self.mapper.searchText.value else { return }
+            self.searchService.wrappedValue?.search(string: searchText)
+                .asObservable().subscribe(onNext: { [weak self] data in
+                    guard let data = data else { return }
+                    self?.router?.routeToPlot(data: data, animated: true)
+                }).disposed(by: self.disposeBag)
         }).disposed(by: disposeBag)
         
         actions.filterButtonDidPeess.asObservable().subscribe(onNext: { [weak self] in
@@ -66,5 +72,9 @@ class SearchViewModel: BaseViewModel, SearchViewModelProtocol {
         attributes.positionConstraints.size = .init(width: .constant(value: 350),
                                                     height: .constant(value: 295))
         SwiftEntryKit.display(entry: filterView, using: attributes)
+        
+        filterView.saveButton.rx.tap.asObservable().subscribe(onNext: {
+            SwiftEntryKit.dismiss()
+        }).disposed(by: disposeBag)
     }
 }
